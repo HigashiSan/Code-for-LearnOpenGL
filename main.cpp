@@ -232,11 +232,11 @@ int main(int argc,char* argv[]) {
 	//Open the window
 	glViewport(0, 0, 800, 600);
 	glEnable(GL_DEPTH_TEST);
-#pragma endregion
+	#pragma endregion
 
 	#pragma region Init Shader Program
 	Shader* myShader = new Shader("vertexSource.txt", "fragmentSource.txt");
-#pragma endregion
+	#pragma endregion
 
 	#pragma region Init Material
 		//declare mymaterial
@@ -266,7 +266,7 @@ int main(int argc,char* argv[]) {
 	//glVertexAttribPointer(8, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
 	//glEnableVertexAttribArray(8);
 
-#pragma endregion
+	#pragma endregion
 
 	#pragma region Init and load Textures
 		/*unsigned int TexBufferA;
@@ -281,7 +281,7 @@ int main(int argc,char* argv[]) {
 	glm::mat4 viewMat;
 	glm::mat4 projMat;
 	projMat = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
-#pragma endregion
+	#pragma endregion
 
 	#pragma region Render Loop	
 	//render loop
@@ -387,7 +387,7 @@ int main(int argc,char* argv[]) {
 		glfwPollEvents();//get infor	
 		camera.UpdateCameraPos();
 	}
-#pragma endregion
+	#pragma endregion
 
 	//Exit
 	glfwTerminate();
